@@ -1,0 +1,16 @@
+from js_base import kieg_motor_1, kieg_motor_2, bot, wait, Stop
+
+kieg_motor_2.run_angle(300, -230)
+bot.straight(695)
+bot.turn(-50)
+bot.straight(45)
+bot.turn(-12)
+bot.straight(120)
+bot.straight(-200)
+bot.turn(-30)
+bot.straight(-120)
+kieg_motor_2.run_angle(250, 190)
+bot.straight(-190)
+kieg_motor_2.run_angle(300, -300)
+bot.straight(230)
+bot.turn(-105)

@@ -1,0 +1,15 @@
+from js_base import bot, kieg_motor_1, kieg_motor_2
+#piac feladat megoldása
+bot.straight(150)
+bot.turn(-41)
+bot.straight(400)
+kieg_motor_2.run_angle(130,200)
+bot.straight(-149)
+bot.straight(10)
+kieg_motor_2.run_angle(75,-160)
+bot.straight(-80)
+kieg_motor_2.run_angle(100,160)
+bot.straight(30)
+bot.turn(-30)
+bot.turn(75)
+bot.straight(-300)
