@@ -22,9 +22,9 @@ bot.straight(-300)
 
 #navigálás a keleti bázishoz
 bot.turn(-45)
-bot.straight(150)
+bot.straight(155)
 bot.turn(40)
 bot.straight(1100)
 bot.turn(45)
-bot.straight(300)
-kieg_motor_2.run_angle(200,-265)
+bot.straight(180)
+
