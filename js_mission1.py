@@ -70,7 +70,6 @@ def mission1():
     bot.turn(24)
     bot.straight(333)
     bot.straight(-148)
-    bot.straight(555)
-    bot.turn(-188)
+    bot.straight(444)
 if __name__ == "__main__":
     mission1()
