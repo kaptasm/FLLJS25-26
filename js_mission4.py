@@ -1,41 +1,35 @@
-from js_base import kieg_motor_1, kieg_motor_2, bot, wait, Stop
+from js_base import nav_motor_1,nav_motor_2, kieg_motor_1, kieg_motor_2, bot, wait, Stop
 
-'''
-#Kovácsműhely
-kieg_motor_2.run_angle(100,-300)
-bot.straight(750)
-bot.turn(-65)
-#Ki lakott itt?
-bot.straight(-60)
-bot.straight(120)
-bot.straight(20)
-#Kavicsok kitolása
-bot.straight(-100)
-bot.turn(20)
-bot.straight(-70)
-bot.turn(-45)
-bot.straight(-200)
-#Nehéz emelés kitolása
-kieg_motor_2.run_angle(120, 300)
-bot.straight(-333)
-kieg_motor_2.run_angle(100, -300)
-#siló
-bot.straight(444)
-bot.turn(-165)
-bot.straight(50)
-bot.stop
-kieg_motor_1.run_time(-777,800)
-kieg_motor_1.run_time(777,800)
-kieg_motor_1.run_time(-777,800)
-kieg_motor_1.run_time(777,800)
-kieg_motor_1.run_time(-777,800)
-kieg_motor_1.run_time(777,800)
-kieg_motor_1.run_time(-777,800)
-kieg_motor_1.run_time(777,800)
-kieg_motor_1.run_time(-777,800)
-bot.turn(70)
-bot.straight(600)
-'''
+def mission4():
+    kieg_motor_2.run_angle(100,-300)
+    bot.straight(736)
+    bot.turn(-62)
+    bot.straight(67)
+    bot.turn(-10)
+    bot.turn(20)
+    bot.straight(-150)
+    bot.turn(-42)
+    bot.straight(-120)
+    kieg_motor_2.run_angle(120, 190)
+    bot.straight(-190)
+    bot.straight(60)
+    kieg_motor_2.run_angle(130, -300)
+    bot.turn(-10)
+    bot.straight(414)
+    bot.turn(-175)
+    bot.straight(43)
+    kieg_motor_1.run_time(-777,800)
+    kieg_motor_1.run_time(777,800)
+    kieg_motor_1.run_time(-777,800)
+    kieg_motor_1.run_time(777,800)
+    kieg_motor_1.run_time(-777,800)
+    kieg_motor_1.run_time(777,800)
+    kieg_motor_1.run_time(-777,800)
+    kieg_motor_1.run_time(777,800)
+    kieg_motor_1.run_time(-777,800)
+    bot.settings(777,777,777,777)
+    bot.turn(45)
+    bot.straight(700)
 
-kieg_motor_2.run_angle(100,-300)
-bot.straight(700)
+if __name__ == "__main__":
+    mission4()
