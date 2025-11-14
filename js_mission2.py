@@ -23,7 +23,7 @@ def mission2():
 
     #navigálás a keleti bázishoz
     bot.turn(-45)
-    bot.straight(155)
+    bot.straight(165)
     bot.turn(40)
     bot.straight(1100)
     bot.turn(45)
