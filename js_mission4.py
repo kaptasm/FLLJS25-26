@@ -17,7 +17,7 @@ def mission4():
     bot.turn(-10)
     bot.straight(414)
     bot.turn(-175)
-    bot.straight(43)
+    bot.straight(41.5)
     kieg_motor_1.run_time(-777,800)
     kieg_motor_1.run_time(777,800)
     kieg_motor_1.run_time(-777,800)
