@@ -5,25 +5,30 @@ def mission2():
     bot.settings(555, 555, 555, 555)
 
     #homok kihúzás
-    kieg_motor_2.run_angle(200,-200)
-    bot.straight(515)
-    kieg_motor_2.run_angle(200,200)
+    kieg_motor_2.run_angle(500,-150, wait=False)
+    bot.straight(510)
+    kieg_motor_2.run_angle(500,150)
     bot.straight(-70)
-    kieg_motor_2.run_angle(200,-200)
+    kieg_motor_2.run_angle(500,-150, wait=False)
 
     #sebesség állítás
     bot.settings(385, 385, 385, 385)
 
     #hajó felemelés
-    bot.straight(250)
-    kieg_motor_2.run_angle(200, -100)
-    kieg_motor_1.run_angle(200, -180)
+    bot.straight(190)
+    kieg_motor_1.run_angle(200, -180, wait=False)
+    bot.drive(100, 0)
+    wait(500)
+    bot.stop()
+    while not kieg_motor_1.done():
+        wait(10)
+    #kieg_motor_2.run_angle(200, -100, wait=False)
     bot.settings(777, 777, 777, 777)
     bot.straight(-300)
 
     #navigálás a keleti bázishoz
     bot.turn(-45)
-    bot.straight(165)
+    bot.straight(155)
     bot.turn(40)
     bot.straight(1100)
     bot.turn(45)
