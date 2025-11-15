@@ -9,7 +9,7 @@ def mission5():
     kieg_motor_1.run_time(200, 500)
     bot.turn(10)
     bot.straight(111)
-    bot.straight(-120)
+    bot.straight(-240)
 
 if __name__ == "__main__":
     mission5()
