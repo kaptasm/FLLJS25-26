@@ -1,21 +1,26 @@
 from js_base import nav_motor_1,nav_motor_2, kieg_motor_1, kieg_motor_2, bot, wait, Stop
 
 def mission4():
-    kieg_motor_2.run_angle(100,-300)
+    #Kovácsműhely(06),Bázisról elindulás
+    kieg_motor_2.run_angle(100,-270)
     bot.straight(736)
     bot.turn(-62)
+    #Ki lakott itt(05)
     bot.straight(67)
     bot.turn(-10)
     bot.turn(20)
+    #Nehézemelés(07), kavicsok kitolása
     bot.straight(-150)
     bot.turn(-42)
     bot.straight(-120)
-    kieg_motor_2.run_angle(120, 190)
+    #Nehéz emelés(07)
+    kieg_motor_2.run_angle(120, 175)
     bot.straight(-190)
     bot.straight(60)
-    kieg_motor_2.run_angle(130, -300)
+    kieg_motor_2.run_angle(130, -270)
     bot.turn(-10)
     bot.straight(414)
+    #Siló(08)
     bot.turn(-175)
     bot.straight(41.5)
     kieg_motor_1.run_time(-777,800)
@@ -28,7 +33,8 @@ def mission4():
     kieg_motor_1.run_time(777,800)
     kieg_motor_1.run_time(-777,800)
     bot.settings(777,777,777,777)
-    bot.turn(45)
+    #Bázisra visszatérés
+    bot.turn(55)
     bot.straight(700)
 
 if __name__ == "__main__":
