@@ -34,6 +34,7 @@ def mission4():
     kieg_motor_1.run_time(-777,800)
     bot.settings(777,777,777,777)
     #Bázisra visszatérés
+    bot.straight(-25)
     bot.turn(55)
     bot.straight(700)
 
