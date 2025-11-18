@@ -63,13 +63,14 @@ def mission1():
     kieg_motor_1.run_angle(111, 303)
     kieg_motor_2.run_angle(111, -52)
     bot.turn(-3.9)
-    bot.straight(-128)
+    bot.straight(-108)
     bot.turn(97)
+    kieg_motor_2.run_angle(111, -55)
     bot.settings(777, 777, 777, 777)
-    bot.straight(169)
-    bot.turn(24)
+    bot.straight(155)
+    '''bot.turn(24)
     bot.straight(333)
     bot.straight(-148)
-    bot.straight(444)
+    bot.straight(444)'''
 if __name__ == "__main__":
     mission1()

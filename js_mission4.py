@@ -22,7 +22,7 @@ def mission4():
     bot.straight(414)
     #Siló(08)
     bot.turn(-175)
-    bot.straight(42.2)
+    bot.straight(41.7)
     kieg_motor_1.run_time(-777,800)
     kieg_motor_1.run_time(777,800)
     kieg_motor_1.run_time(-777,800)
