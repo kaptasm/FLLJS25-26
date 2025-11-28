@@ -22,7 +22,7 @@ def mission4():
     bot.straight(414)
     #Siló(08)
     bot.turn(-175)
-    bot.straight(41.5)
+    bot.straight(41.7)
     kieg_motor_1.run_time(-777,800)
     kieg_motor_1.run_time(777,800)
     kieg_motor_1.run_time(-777,800)
@@ -34,6 +34,7 @@ def mission4():
     kieg_motor_1.run_time(-777,800)
     bot.settings(777,777,777,777)
     #Bázisra visszatérés
+    bot.straight(-25)
     bot.turn(55)
     bot.straight(700)
 
