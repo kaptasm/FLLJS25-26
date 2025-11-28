@@ -1,7 +1,7 @@
 from js_base import bot, kieg_motor_1, kieg_motor_2
 
 def mission3():
-    #piac feladat
+    '''#piac feladat
     #kieg_motor_1.run_angle(777,260)
     kieg_motor_2.run_angle(100,60)
     bot.straight(185) #bot.straight(195)
@@ -30,15 +30,47 @@ def mission3():
 
     #kieg_motor_1.run_angle(200, 50)
     # kieg_motor_1.run_angle(300, 90)
-    '''bot.straight(300)
+    bot.straight(300)
     bot.turn(72)
     kieg_motor_1.run_angle(150, 110)
     kieg_motor_1.run_angle(150,-110)
     bot.straight(-90)
     bot.turn(-15)
-    kieg_motor_1.run_angle(150,230)'''
-    #bot.straight(111)
-    #kieg_motor_1.run_angle(200, 25)
+    kieg_motor_1.run_angle(150,230)
+    bot.straight(111)
+    kieg_motor_1.run_angle(200, 25)'''
+
+    bot.settings(800, 800, 800, 800)
+    kieg_motor_2.run_angle(100,60)
+    bot.straight(185) #bot.straight(195)
+    bot.turn(-45)
+    bot.straight(192)
+    bot.turn(-30)#bot.turn(-40)
+    kieg_motor_1.run_angle(150, -150)
+    bot.turn(25)
+    bot.straight(190)
+    kieg_motor_2.run_angle(150,-70)
+    kieg_motor_2.run_angle(150,100)
+    kieg_motor_1.run_angle(230, 200)
+    bot.straight(-143)#bot.straight(-153)
+    #bot.straight(33)
+    kieg_motor_1.run_angle(300,-220)
+    bot.straight(-40)
+    bot.turn(-33)
+    bot.straight(150)
+    bot.settings(900, 900, 900, 900)
+    kieg_motor_1.run_angle(777,155)
+    #a vödör kihúzás
+    bot.settings(750, 750, 750, 750)
+    bot.turn(-45)
+    #vissza navigálás
+    bot.settings(888, 888, 888, 888)
+    bot.straight(-300)
+    bot.turn(-55)
+    bot.straight(380)
+
+    
+
 
 if __name__ == "__main__":
     mission3()
