@@ -40,7 +40,7 @@ def mission3():
     bot.straight(111)
     kieg_motor_1.run_angle(200, 25)'''
 
-    bot.settings(800, 800, 800, 800)
+    bot.settings(600, 600, 600, 600)
     kieg_motor_2.run_angle(100,60)
     bot.straight(185) #bot.straight(195)
     bot.turn(-45)
@@ -58,7 +58,7 @@ def mission3():
     bot.straight(-40)
     bot.turn(-33)
     bot.straight(150)
-    bot.settings(900, 900, 900, 900)
+    bot.settings(600, 600, 600, 600)
     kieg_motor_1.run_angle(777,155)
     #a vödör kihúzás
     bot.settings(750, 750, 750, 750)
