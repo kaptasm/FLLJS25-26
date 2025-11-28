@@ -1,0 +1,49 @@
+from js_base import nav_motor_1,nav_motor_2, kieg_motor_1, kieg_motor_2, bot, wait, Stop
+
+ #sebesség állítás
+bot.settings(555, 555, 555, 555)
+
+    #homok kihúzás
+kieg_motor_2.run_angle(500,-150, wait=False)
+bot.straight(510)
+kieg_motor_2.run_angle(500,150)
+bot.straight(-70)
+kieg_motor_2.run_angle(500,-150, wait=False)
+
+    #sebesség állítás
+bot.settings(385, 385, 385, 385)
+
+    #hajó felemelés
+bot.straight(190)
+kieg_motor_1.run_angle(200, -180, wait=False)
+bot.drive(100, 0)
+wait(500)
+bot.stop()
+while not kieg_motor_1.done():
+        wait(10)
+    #kieg_motor_2.run_angle(200, -100, wait=False)
+bot.settings(777, 777, 777, 777)
+bot.straight(-130)
+
+#navigálás a keleti bázishoz
+bot.turn(-45)
+kieg_motor_2.run_angle(400, -100)
+bot.straight(155)
+bot.turn(40)
+#
+bot.straight(350)
+bot.straight(-100)
+bot.straight(100)
+bot.straight(-100)
+bot.straight(100)
+bot.straight(-100)
+bot.straight(100)
+bot.straight(-100)
+#kieg_motor_2.run_angle(400,160)
+#kieg_motor_2.run_angle(400, -160)
+#bot.turn(30)
+#kieg_motor_2.run_angle(200, 270)
+ # bot.turn(40)
+ # bot.straight(1100)
+ # bot.turn(45)
+ # bot.straight(180)'''
