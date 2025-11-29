@@ -7,7 +7,7 @@ def mission5():
     bot.settings(333,333,333,333)
     bot.straight(369)
     kieg_motor_1.run_time(200, 500)
-    bot.turn(10)
+    bot.turn(13)
     bot.straight(111)
     bot.straight(-240)
 
