@@ -28,11 +28,11 @@ def mission2():
 
     #navigálás a keleti bázishoz
     bot.turn(-45)
-    bot.straight(155)
+    bot.straight(200)
     bot.turn(40)
-    bot.straight(1100)
-    bot.turn(45)
-    bot.straight(180)
+    bot.straight(1500)
+    #bot.turn(45)
+    #bot.straight(200)
 
 if __name__ == "__main__":
     mission2()
