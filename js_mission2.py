@@ -30,7 +30,8 @@ def mission2():
     bot.turn(-45)
     bot.straight(200)
     bot.turn(40)
-    bot.straight(1500)
+    bot.straight(1000)
+    bot.curve(320, 100)
     #bot.turn(45)
     #bot.straight(200)
 

@@ -51,7 +51,7 @@ def mission1():
     bot.straight(-666)'''
 
     
-    bot.settings(222, 222, 222, 222)
+    '''#jo-bot.settings(222, 222, 222, 222)
     bot.straight(-69)
     bot.turn(44)
     bot.straight(-139)
@@ -84,7 +84,7 @@ def mission1():
     bot.turn(-40)
     bot.straight(120)
     bot.turn(127)
-    bot.straight(700)
+    bot.straight(700)#-jo'''
     
 
     '''bot.settings(777,777,777,777)
@@ -105,6 +105,8 @@ def mission1():
     #bot.straight(555)
     #bot.straight(120)
     #bot.turn(-50)
+
+    kieg_motor_1.run_time(2000, 500)
     
 if __name__ == "__main__":
     mission1()
