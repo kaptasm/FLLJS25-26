@@ -19,14 +19,14 @@ def mission5():
     #bot.straight(33)
     kieg_motor_1.run_angle(300,-220)
     bot.straight(-15)
-    bot.turn(-28)
+    bot.turn(-28.5)
     bot.straight(170)
     bot.settings(600, 600, 600, 600)
     kieg_motor_1.run_angle(200, 180)
     #kieg_motor_1.run_angle(777,155)
     #a vödör kihúzás
     bot.settings(750, 750, 750, 750)
-    bot.turn(-45)
+    bot.turn(-50)
     #vissza navigálás
     bot.settings(888, 888, 888, 888)
     bot.turn(-90)
