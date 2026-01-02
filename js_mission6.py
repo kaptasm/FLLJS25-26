@@ -10,6 +10,8 @@ def mission6():
     kieg_motor_1.run_time(200, 500)
     bot.turn(10)
     kieg_motor_1.run_time(200, 500)
+    bot.turn(5)
+    kieg_motor_1.run_time(200, 500)
     bot.straight(111)
     bot.straight(-240)
     
