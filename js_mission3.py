@@ -17,12 +17,13 @@ def mission3():
     #Nehéz emelés(07)
     kieg_motor_2.run_angle(120, 90)
     bot.straight(-190)
-    bot.straight(60)
+    bot.settings(777,777,777,777)
+    bot.straight(100)
     kieg_motor_2.run_angle(130, -90)
     #bot.turn(-10)
-    bot.straight(420)
+    bot.straight(390)
     #Bázisra visszatérés
-    bot.turn(-100)
+    bot.turn(-120)
     bot.straight(700)
 
 if __name__ == "__main__":
