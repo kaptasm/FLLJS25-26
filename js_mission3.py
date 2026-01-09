@@ -2,7 +2,7 @@ from js_base import nav_motor_1,nav_motor_2, kieg_motor_1, kieg_motor_2, bot, wa
 
 def mission3():
     #Kovácsműhely(06),Bázisról elindulás
-    kieg_motor_2.run_angle(100,-90)
+    kieg_motor_2.run_angle(100,-90,wait=False)
     bot.straight(736)
     bot.turn(-62)
     #Ki lakott itt(05)
