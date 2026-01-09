@@ -2,18 +2,18 @@ from js_base import kieg_motor_1, kieg_motor_2, bot, wait, Stop
 
 def mission1():
 
-    bot.settings(222, 222, 222, 222)
+    bot.settings(777, 777, 777, 777)
     bot.straight(-69)
     bot.turn(44)
     bot.straight(-139)
     bot.turn(-44)
-    bot.straight(-595)
-    bot.turn(-91)
+    bot.straight(-616)
 
     bot.settings(111, 111, 111, 111)
+    bot.turn(-91)
     bot.straight(199)
     kieg_motor_1.run_angle(111, 302.4)
-    kieg_motor_2.run_angle(111, -52)
+    kieg_motor_2.run_angle(111, -44)
     bot.turn(-3.9)
     bot.straight(-108)
     bot.turn(97)
