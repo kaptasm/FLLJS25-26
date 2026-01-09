@@ -6,6 +6,7 @@ def mission3():
     bot.straight(736)
     bot.turn(-62)
     #Ki lakott itt(05)
+    bot.settings(565,565,565,565)
     bot.straight(67)
     bot.turn(-13)
     bot.turn(23)
@@ -18,11 +19,10 @@ def mission3():
     bot.straight(-190)
     bot.straight(60)
     kieg_motor_2.run_angle(130, -90)
-    bot.turn(-10)
-    bot.straight(414)
+    #bot.turn(-10)
+    bot.straight(420)
     #Bázisra visszatérés
     bot.turn(-100)
-    bot.settings(777,777,777,777)
     bot.straight(700)
 
 if __name__ == "__main__":

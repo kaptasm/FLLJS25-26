@@ -28,9 +28,11 @@ def mission2():
 
     #navigálás a keleti bázishoz
     bot.turn(-45)
-    bot.straight(230)
+    bot.straight(240)
     bot.turn(45)
     bot.straight(1000)
+    #while not bot.straight.done():
+    #    wait(10)
     bot.curve(320, 100)
     #bot.turn(45)
     #bot.straight(200)
