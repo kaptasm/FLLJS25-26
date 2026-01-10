@@ -2,7 +2,7 @@ from pybricks.hubs import PrimeHub
 from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
 from pybricks.robotics import DriveBase
-from pybricks.tools import wait, StopWatch, hub_menu
+from pybricks.tools import wait, hub_menu, StopWatch
 
 from js_base import bot, kieg_motor_1, kieg_motor_2, hub
 from js_mission1 import mission1
