@@ -6,7 +6,7 @@ from pybricks.tools import wait, StopWatch, hub_menu
 
 from js_base import bot, kieg_motor_1, kieg_motor_2, hub
 from js_mission1 import mission1
-from js_mission2 import mission2
+from js_mission2RÉGI import mission2
 from js_mission3 import mission3
 from js_mission4 import mission4
 from js_mission55 import mission5
