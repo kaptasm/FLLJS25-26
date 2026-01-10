@@ -1,5 +1,0 @@
-from js_base import nav_motor_1,nav_motor_2, kieg_motor_1, kieg_motor_2, bot, wait, Stop
-
-bot.settings(777, 777, 777, 777)
-kieg_motor_1.run_angle(300, -400) 
-
