@@ -20,7 +20,7 @@ def mission5():
     #bot.straight(33)
     kieg_motor_1.run_angle(300,-220)
     bot.straight(-15)
-    bot.turn(-28.5)
+    bot.turn(-26)
     bot.straight(170)
     bot.settings(600, 600, 600, 600)
     kieg_motor_1.run_angle(200, 180)

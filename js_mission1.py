@@ -5,13 +5,13 @@ def mission1():
     bot.settings(777, 777, 777, 777)
     bot.straight(-69)
     bot.turn(44)
-    bot.straight(-139)
+    bot.straight(-128)
     bot.turn(-44)
     bot.straight(-616)
 
     bot.settings(111, 111, 111, 111)
     bot.turn(-91)
-    bot.straight(199)
+    bot.straight(210)
     kieg_motor_1.run_angle(111, 302.4)
     kieg_motor_2.run_angle(111, -44)
     bot.turn(-3.9)
@@ -32,6 +32,14 @@ def mission1():
     bot.straight(-90)
     bot.turn(-16)
     bot.straight(170)
+
+    '''bot.turn(-33)
+    bot.straight(277)
+    bot.turn(40)
+    bot.straight(-167)
+    kieg_motor_1.run_angle(777, 303)
+    bot.straight(-670)'''
+
     bot.turn(-40)
     bot.straight(120)
     bot.turn(127)
