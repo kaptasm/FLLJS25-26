@@ -1,6 +1,6 @@
 from js_base import nav_motor_1,nav_motor_2, kieg_motor_1, kieg_motor_2, bot, wait, Stop
 
-def missionrégi2():
+def mission2():
     #sebesség állítás
     bot.settings(555, 555, 555, 555)
 
@@ -14,7 +14,7 @@ def missionrégi2():
     #sebesség állítás
     bot.settings(385, 385, 385, 385)
 
-    #hajó felemelés
+    #hajó felemelés0
     bot.straight(190)
     kieg_motor_1.run_angle(200, -180, wait=False)
     bot.drive(100, 0)
@@ -28,10 +28,14 @@ def missionrégi2():
 
     #navigálás a keleti bázishoz
     bot.turn(-45)
-    bot.straight(230)
+    bot.straight(240)
     bot.turn(45)
     bot.straight(1000)
+    #while not bot.straight.done():
+    #    wait(10)
     bot.curve(320, 100)
     #bot.turn(45)
     #bot.straight(200)
 
+if __name__ == "__main__":
+    mission2()
