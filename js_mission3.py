@@ -3,15 +3,16 @@ from js_base import nav_motor_1,nav_motor_2, kieg_motor_1, kieg_motor_2, bot, wa
 def mission3():
     #Kovácsműhely(06),Bázisról elindulás
     kieg_motor_2.run_angle(100,-90,wait=False)
-    bot.straight(736)
+    bot.straight(743)
     bot.turn(-62)
+    wait(500)
     #Ki lakott itt(05)
     bot.settings(565,565,565,565)
-    bot.straight(67)
+    bot.straight(66)
     bot.turn(-13)
     bot.turn(23)
     #Nehézemelés(07), kavicsok kitolása
-    bot.straight(-150)
+    bot.straight(-162)
     bot.turn(-42)
     bot.straight(-120)
     #Nehéz emelés(07)

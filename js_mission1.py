@@ -1,89 +1,37 @@
-from js_base import kieg_motor_1, kieg_motor_2, bot, wait, Stop
+from js_base import bot, sensor, kieg_motor_1, kieg_motor_2, wait, Color
 
-def mission1():
+a = True
+b = 0
 
-    bot.settings(777, 777, 777, 777)
-    bot.straight(-69)
-    bot.turn(44)
-    bot.straight(-128)
-    bot.turn(-44)
-    bot.straight(-616)
+bot.settings(234, 234, 234, 234)
+#csille, kincs
+bot.straight(987)
+bot.turn(88)
+kieg_motor_1.run_angle(777, -234, wait=False)
+kieg_motor_2.run_angle(777, 234)
 
-    bot.settings(111, 111, 111, 111)
-    bot.turn(-91)
-    bot.straight(210)
-    kieg_motor_1.run_angle(111, 302.4)
-    kieg_motor_2.run_angle(111, -44)
-    bot.turn(-3.9)
-    bot.straight(-108)
-    bot.turn(97)
-    kieg_motor_2.run_angle(111, -55)
-    
-    bot.settings(777, 777, 777, 777)
-    bot.straight(155)
-    bot.turn(20)
-    bot.settings(370,370,370,370)
-    bot.straight(400)
-    bot.settings(777, 777, 777, 777)
-    bot.straight(-300)
-    bot.turn(-76)
-    bot.straight(-100)
-    bot.turn(15)
-    bot.straight(-90)
-    bot.turn(-16)
-    bot.straight(170)
+while a:
+    if sensor.color() == Color.WHITE or b>=7:
+        bot.straight(56)
+        kieg_motor_2.run_angle(111, -67)
+        kieg_motor_1.run_time(111, 2340)
+        a = False
+    else:
+        bot.straight(23.4)
+        b += 1
 
-    '''bot.turn(-33)
-    bot.straight(277)
-    bot.turn(40)
-    bot.straight(-167)
-    kieg_motor_1.run_angle(777, 303)
-    bot.straight(-670)'''
-
-    bot.turn(-40)
-    bot.straight(120)
-    bot.turn(127)
-    bot.straight(700)
-    
-if __name__ == "__main__":
-    mission1()
-
-'''
-import pygame
-import time
-import board
-from adafruit_ads1x15 import ADS1015, AnalogIn, ads1x15
-
-pygame.init()
-pygame.mixer.init()
-
-i2c = board.I2C()
-ads = ADS1015(i2c)
-chan = AnalogIn(ads, ads1x15.Pin.A0)
-pygame.mixer.music.load('/home/raspberrypi/Music/lkh.mp3')
-vol = 0.0
-pygame.mixer.music.set_volume(vol)
-pygame.mixer.music.play(-1)
-
-try:
-   
-#try:  
-    while True:
-        
-       vol = chan.voltage
-       if vol >= 0.1 :
-           vol = vol/2
-           pygame.mixer.music.set_volume(vol)
-           print(f"{chan.value:>5}\t{chan.voltage:>5.3f}\t{vol}")
-           time.sleep(0.5)
-           pygame.mixer.music.set_volume(0)
-       else:
-           pygame.mixer.music.set_volume(0) 
-except pygame.error as e:
-    print(f"Hiba lajatszaskor: {e}")
-
-finally:
-    pygame.mixer.quit()
-    pygame.quit()'''
-
-
+kieg_motor_1.run_time(-111, 2340)
+bot.straight(-167)
+kieg_motor_2.run_angle(111, -67)
+bot.turn(90)
+bot.straight(288)
+kieg_motor_1.run_time(111, 1370)
+bot.turn(-53)
+bot.straight(-282)
+bot.straight(33.5)
+bot.turn(7.7)
+bot.straight(-67)
+bot.settings(777, 777, 777, 777)
+bot.straight(199)
+bot.turn(56)
+bot.straight(677)
