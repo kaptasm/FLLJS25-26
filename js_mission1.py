@@ -1,9 +1,9 @@
-from js_base import kieg_motor_1, kieg_motor_2, bot, wait, Stop, Color
+from js_base import kieg_motor_1, kieg_motor_2, bot, wait, Stop, Color, sensor
 
 def mission1():
 
-    a = True
-    b = 0
+    kesz = False
+    menetszam = 0
 
     bot.settings(488, 488, 488, 488)
     #csille, kincs
@@ -12,15 +12,15 @@ def mission1():
     kieg_motor_1.run_angle(777, -234, wait=False)
     kieg_motor_2.run_angle(777, 234)
 
-    while a:
-        if sensor.color() == Color.WHITE or b>=7:
+    while not kesz:
+        if sensor.color() == Color.WHITE or menetszam>=7:
             bot.straight(56)
             kieg_motor_2.run_angle(111, -67)
             kieg_motor_1.run_time(111, 2340)
-            a = False
+            kesz = True
         else:
             bot.straight(23.4)
-            b += 1
+            menetszam += 1
 
     kieg_motor_1.run_time(-111, 2340)
     bot.settings(234, 234, 234, 234)
