@@ -1,6 +1,7 @@
 from js_base import nav_motor_1,nav_motor_2, kieg_motor_1, kieg_motor_2, bot, wait, Stop
 
 def mission4():
+    bot.use_gyro(True)
     #Kovácsműhely(06),Bázisról elindulás
     kieg_motor_2.run_angle(100,-90,wait=False)
     bot.straight(743)
@@ -8,11 +9,11 @@ def mission4():
     wait(500)
     #Ki lakott itt(05)
     bot.settings(565,565,565,565)
-    bot.straight(66)
+    bot.straight(55)
     bot.turn(-13)
     bot.turn(23)
     #Nehézemelés(07), kavicsok kitolása
-    bot.straight(-162)
+    bot.straight(-135)
     bot.turn(-42)
     bot.straight(-120)
     #Nehéz emelés(07)
@@ -26,6 +27,7 @@ def mission4():
     #Bázisra visszatérés
     bot.turn(-120)
     bot.straight(700)
+    bot.use_gyro(False)
 
 if __name__ == "__main__":
     mission4()

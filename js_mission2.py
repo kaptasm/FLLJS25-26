@@ -1,6 +1,7 @@
 from js_base import nav_motor_1,nav_motor_2, kieg_motor_1, kieg_motor_2, bot, wait, Stop
 
 def mission2():
+    bot.use_gyro(True)
     bot.settings(777, 777, 777, 777)
     bot.straight(575)
     bot.turn(7.7)
@@ -12,7 +13,7 @@ def mission2():
     kieg_motor_2.run_angle(222, -36)
     bot.straight(155)
     kieg_motor_2.run_angle(222, -189)
-    bot.turn(-48)
+    bot.turn(-50)
     kieg_motor_1.run_angle(222, 67)
     bot.straight(-39)
     kieg_motor_1.run_angle(222, -48)
@@ -21,5 +22,6 @@ def mission2():
     bot.turn(56)
     kieg_motor_1.run_angle(222, 444, wait=False)
     bot.straight(-737)
+    bot.use_gyro(False)
 if __name__ == "__main__":
     mission2()

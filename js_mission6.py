@@ -1,6 +1,7 @@
 from js_base import bot, kieg_motor_1, kieg_motor_2
 
 def mission6():
+    bot.use_gyro(True)
   
     bot.settings(600, 600, 600, 600)
     kieg_motor_2.run_angle(100,60)
@@ -29,9 +30,10 @@ def mission6():
     bot.settings(650, 650, 650, 650)
     bot.turn(-50)
     #vissza navigálás
-    bot.settings(888, 888, 888, 888)
+    bot.settings(777, 777, 777, 777)
     bot.turn(-90)
     bot.straight(380)
+    bot.use_gyro(False)
     
 if __name__ == "__main__":
     mission6()

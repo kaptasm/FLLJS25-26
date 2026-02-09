@@ -23,32 +23,32 @@ def menu():
         elif selected == "1":
             mission1()
             hub.speaker.beep()
-            selected = hub_menu("1", "2", "3", "4", "5", "6", "7")
+            selected = hub_menu("2", "3", "4", "5", "6", "7", "1")
 
         elif selected == "2":
             mission2()
             hub.speaker.beep()
-            selected = hub_menu("1", "2", "3", "4", "5", "6", "7")
+            selected = hub_menu("3", "4", "5", "6", "7", "1", "2")
 
         elif selected == "3":
             mission3()
             hub.speaker.beep()
-            selected = hub_menu("1", "2", "3", "4", "5", "6", "7")
-
+            selected = hub_menu("4", "5", "6", "7", "1", "2", "3")
+    
         elif selected == "4":
             mission4()
             hub.speaker.beep()
-            selected = hub_menu("1", "2", "3", "4", "5", "6", "7")
+            selected = hub_menu("5", "6", "7", "1", "2", "3", "4")
 
         elif selected == "5":
             mission5()
             hub.speaker.beep()
-            selected = hub_menu("1", "2", "3", "4", "5", "6", "7")
+            selected = hub_menu("6", "7", "1", "2", "3", "4", "5")
 
         elif selected == "6":
             mission6()
             hub.speaker.beep()
-            selected = hub_menu("1", "2", "3", "4", "5", "6", "7")
+            selected = hub_menu("7", "1", "2", "3", "4", "5", "6")
 
         elif selected == "7":
             mission7()
