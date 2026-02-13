@@ -4,9 +4,9 @@ def mission7():
     bot.use_gyro(True)
     bot.settings(777,777,777,777)
     bot.straight(840, Stop.NONE)
-    bot.turn(5)
+    bot.turn(22)
     bot.straight(400)
-    bot.straight(-100)
+    bot.straight(-250)
 
     '''kesz = False
     menetszam = 0
