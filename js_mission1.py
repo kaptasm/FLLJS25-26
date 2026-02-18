@@ -8,7 +8,7 @@ def mission1():
 
     bot.settings(488, 488, 488, 488)
     #csille, kincs
-    bot.straight(974)
+    bot.straight(984)
     bot.turn(88)
     kieg_motor_1.run_angle(777, -234, wait=False)
     kieg_motor_2.run_angle(777, 234)
