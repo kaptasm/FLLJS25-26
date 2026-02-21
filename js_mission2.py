@@ -2,7 +2,26 @@ from js_base import nav_motor_1,nav_motor_2, kieg_motor_1, kieg_motor_2, bot, wa
 
 def mission2():
     bot.use_gyro(True)
+
     bot.settings(777, 777, 777, 777)
+    bot.straight(555)
+    kieg_motor_1.run_angle(111, 56)
+    bot.settings(157, 157, 157, 157)
+    bot.turn(-19.8)
+    kieg_motor_1.run_angle(222, 67)
+    bot.straight(253)
+    kieg_motor_2.run_angle(777, -189)
+    bot.straight(-55)
+    bot.turn(-33)
+    bot.straight(22)
+    kieg_motor_1.run_angle(222, -111)
+    bot.straight(63)
+    kieg_motor_1.run_angle(222, 99) 
+    bot.settings(777, 777, 777, 777)
+    bot.curve(-156, -44, Stop.NONE)
+    bot.straight(-777)
+
+    '''bot.settings(777, 777, 777, 777)
     bot.straight(575)
     bot.turn(7.7)
     bot.straight(-100)
@@ -21,7 +40,7 @@ def mission2():
     bot.straight(-99)
     bot.turn(56)
     kieg_motor_1.run_angle(222, 444, wait=False)
-    bot.straight(-737)
+    bot.straight(-737)'''
     bot.use_gyro(False)
 if __name__ == "__main__":
     mission2()
