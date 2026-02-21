@@ -8,6 +8,7 @@ from js_mission4 import mission4
 from js_mission5 import mission5
 from js_mission6 import mission6
 from js_mission7 import mission7
+from js_mission8 import mission8
 
 
 # Menü, ami összefogja a hét küldetésünket
@@ -18,42 +19,49 @@ def menu():
 
         if selected == "0":
             hub.speaker.beep()
-            selected = hub_menu("1", "2", "3", "4", "5", "6", "7")
+            selected = hub_menu("1", "2", "3", "4", "5", "6", "7", "8")
 
         elif selected == "1":
             mission1()
             hub.speaker.beep()
-            selected = hub_menu("2", "3", "4", "5", "6", "7", "1")
+            selected = hub_menu("2", "3", "4", "5", "6", "7", "8", "1")
 
         elif selected == "2":
             mission2()
             hub.speaker.beep()
-            selected = hub_menu("3", "4", "5", "6", "7", "1", "2")
+            selected = hub_menu("3", "4", "5", "6", "7", "8", "1", "2")
 
         elif selected == "3":
             mission3()
             hub.speaker.beep()
-            selected = hub_menu("4", "5", "6", "7", "1", "2", "3")
+            selected = hub_menu("4", "5", "6", "7", "8", "1", "2", "3")
     
         elif selected == "4":
             mission4()
             hub.speaker.beep()
-            selected = hub_menu("5", "6", "7", "1", "2", "3", "4")
+            selected = hub_menu("5", "6", "7", "8", "1", "2", "3", "4")
 
         elif selected == "5":
             mission5()
             hub.speaker.beep()
-            selected = hub_menu("6", "7", "1", "2", "3", "4", "5")
+            selected = hub_menu("6", "7", "8", "1", "2", "3", "4", "5")
 
         elif selected == "6":
             mission6()
             hub.speaker.beep()
-            selected = hub_menu("7", "1", "2", "3", "4", "5", "6")
+            selected = hub_menu("7", "8", "1", "2", "3", "4", "5", "6")
 
         elif selected == "7":
             mission7()
             hub.speaker.beep()
+            selected = hub_menu("8", "1", "2", "3", "4", "5", "6", "7")
+
+        elif selected == "8":
+            mission8()
+            hub.speaker.beep()
             selected = hub_menu("1", "2", "3", "4", "5", "6", "7")
+    
+
 
 
 menu()
