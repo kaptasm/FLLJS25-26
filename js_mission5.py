@@ -6,6 +6,7 @@ def mission5():
     #Kovácsműhely(06),Bázisról elindulás
     kieg_motor_2.run_angle(100,-90,wait=False)
     bot.straight(743)
+    bot.settings(150, 150, 150, 150)
     bot.turn(-62)
     #Ki lakott itt(05)
     bot.settings(565,565,565,565)
