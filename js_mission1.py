@@ -12,9 +12,10 @@ def mission1():
     bot.turn(88)
     kieg_motor_1.run_angle(777, -234, wait=False)
     kieg_motor_2.run_angle(777, 234)
-    bot.straight(67)
+    bot.settings(234, 234, 234, 234)
+    bot.straight(222)
 
-    while not kesz:
+    '''while not kesz:
         if sensor.color() == Color.WHITE or menetszam>=7:
             bot.straight(56)
             kieg_motor_2.run_angle(111, -63)
@@ -22,9 +23,11 @@ def mission1():
             kesz = True
         else:
             bot.straight(23.4)
-            menetszam += 1
-
-    kieg_motor_1.run_time(-111, 2340)
+            menetszam += 1'''
+    
+    kieg_motor_2.run_angle(111, -63)
+    kieg_motor_1.run_time(111, 2340)
+    kieg_motor_1.run_time(-111, 2340, wait=False)
     bot.settings(234, 234, 234, 234)
     bot.straight(-167)
     bot.settings(777,777,777,777)
@@ -40,7 +43,7 @@ def mission1():
     bot.straight(67)
     bot.turn(16.7)
     bot.straight(-99)
-    bot.curve(488, 180)
+    bot.curve(488, 123)
 
     bot.use_gyro(False)
     
