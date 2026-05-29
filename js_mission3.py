@@ -4,11 +4,15 @@ def mission3():
     bot.use_gyro(True)
     '''bot.use_gyro(True)
     ismetles = 0'''
-    bot.settings(555, 555, 555, 555)
-    bot.straight(505)
-    kieg_motor_1.run_angle(111, -39)
-    bot.turn(7)
+    bot.settings(546, 546, 546, 546)
+    #tololap betolasa
+    bot.straight(475)
+    #zászló kiszállítás
+    kieg_motor_1.run_angle(777, 110)
+    #homok lehúzása
+    bot.turn(11.11)
     bot.straight(-111)
+    #Kék bázisra átjutás
     bot.settings(777, 777, 777, 777)
     bot.turn(-46)
     bot.straight(363)

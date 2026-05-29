@@ -7,7 +7,6 @@ from js_mission3 import mission3
 from js_mission4 import mission4
 from js_mission5 import mission5
 from js_mission6 import mission6
-from js_mission7 import mission7
 
 # Menü, ami összefogja a nyolc küldetésünket
 def menu():
