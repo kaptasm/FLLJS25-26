@@ -1,0 +1,332 @@
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import ColorSensor
+from pybricks.parameters import Port, Button
+from pybricks.tools import wait
+
+from missionproba1 import mission1
+from missionproba2 import mission2
+from missionproba3 import mission3
+from missionproba4 import mission4
+from missionproba5 import mission5
+from missionproba6 import mission6
+from missionproba7 import mission7
+
+hub = PrimeHub()
+color_sensor = ColorSensor(Port.C)
+
+
+# ==================================================
+# MENÜ
+# ==================================================
+
+selected = 1
+last_color = None
+
+hub.display.number(selected)
+
+
+# ==================================================
+# SZÍNFELISMERÉS
+# ==================================================
+
+def felismer_szint():
+
+    hsv = color_sensor.hsv()
+
+    H = hsv.h
+    S = hsv.s
+    V = hsv.v
+
+    REF = color_sensor.reflection()
+
+
+    # ----------------------------------------------
+    # FEKETE
+    # ----------------------------------------------
+
+    if REF <= 1 or V <= 2:
+        return "FEKETE"
+
+
+    # ----------------------------------------------
+    # FEHÉR
+    # ----------------------------------------------
+
+    if S <= 40 and REF >= 15:
+        return "FEHER"
+
+
+    # ----------------------------------------------
+    # PIROS
+    # ----------------------------------------------
+
+    if H >= 340 or H <= 10:
+        return "PIROS"
+
+
+    # ----------------------------------------------
+    # FEHÉR
+    # ----------------------------------------------
+
+    if S <= 40 and REF >= 15:
+        return "FEHER"
+
+    # ----------------------------------------------
+    # SÁRGA
+    # ----------------------------------------------
+
+    if H >= 40 and H <= 60:
+        return "SARGA"
+
+
+    # ----------------------------------------------
+    # ZÖLD
+    # ----------------------------------------------
+
+    if H >= 80 and H <= 115:
+
+        if REF >= 4:
+            return "VILAGOSZOLD"
+
+        else:
+            return "SOTETZOLD"
+
+
+    # ----------------------------------------------
+    # SÖTÉTZÖLD
+    # ----------------------------------------------
+
+    if H > 115 and H <= 175:
+        return "SOTETZOLD"
+
+
+    # ----------------------------------------------
+    # KÉK
+    # ----------------------------------------------
+
+    if H >= 175 and H <= 230:
+
+        # REF 3 körül = sötétkék
+        # REF 7 körül = világoskék
+
+        if REF <= 4:
+            return "SOTETKEK"
+
+        else:
+            return "VILAGOSKEK"
+
+
+    # ----------------------------------------------
+    # ISMERETLEN
+    # ----------------------------------------------
+
+    return None
+
+
+# ==================================================
+# FŐPROGRAM
+# ==================================================
+
+while True:
+
+    color = felismer_szint()
+
+
+    # ==================================================
+    # ÚJ SZÍN
+    # ==================================================
+
+    if color is not None and color != last_color:
+
+
+        # ==============================================
+        # SÁRGA → 1
+        # ==============================================
+
+        if color == "SARGA":
+
+            selected = 1
+
+
+        # ==============================================
+        # PIROS → 2
+        # ==============================================
+
+        elif color == "PIROS":
+
+            selected = 2
+
+
+        # ==============================================
+        # VILÁGOSKÉK → 3
+        # ==============================================
+
+        elif color == "VILAGOSKEK":
+
+            selected = 3
+
+
+        # ==============================================
+        # SÖTÉTKÉK → 4
+        # ==============================================
+
+        elif color == "SOTETKEK":
+
+            selected = 4
+
+
+        # ==============================================
+        # VILÁGOSZÖLD → 5
+        # ==============================================
+
+        elif color == "VILAGOSZOLD":
+
+            selected = 5
+
+
+        # ==============================================
+        # SÖTÉTZÖLD → 6
+        # ==============================================
+
+        elif color == "SOTETZOLD":
+
+            selected = 6
+
+
+        # ==============================================
+        # FEHÉR → 7
+        # ==============================================
+
+        elif color == "FEHER":
+
+            selected = 7
+
+
+        # ==============================================
+        # HA VOLT ÉRVÉNYES MISSION
+        # ==============================================
+
+        if color in (
+            "SARGA",
+            "PIROS",
+            "VILAGOSKEK",
+            "SOTETKEK",
+            "VILAGOSZOLD",
+            "SOTETZOLD",
+            "FEHER"
+        ):
+
+            # Csak a kiválasztott szám jelenik meg
+
+            hub.display.number(selected)
+
+            # Jelzés, hogy kiválasztotta
+
+            #hub.speaker.beep()
+
+            print(color)
+
+            # Megjegyezzük az aktuális színt
+
+            last_color = color
+
+
+    # ==================================================
+    # HA ELKERÜL A SZÍNTŐL
+    # ==================================================
+
+    # Ha már nem látja az előző színt,
+    # akkor új színt lehet választani.
+
+    if color is None:
+
+        last_color = None
+
+
+    # ==================================================
+    # JOBB GOMB → INDÍTÁS
+    # ==================================================
+
+    if Button.RIGHT in hub.buttons.pressed():
+
+        # Megvárjuk, hogy elengedje a gombot
+
+        while Button.RIGHT in hub.buttons.pressed():
+            wait(50)
+
+
+        # Indítási hang
+
+        hub.speaker.beep()
+
+
+        # ==============================================
+        # MISSION 1
+        # ==============================================
+
+        if selected == 1:
+            mission1()
+
+
+        # ==============================================
+        # MISSION 2
+        # ==============================================
+
+        elif selected == 2:
+            mission2()
+
+
+        # ==============================================
+        # MISSION 3
+        # ==============================================
+
+        elif selected == 3:
+            mission3()
+
+
+        # ==============================================
+        # MISSION 4
+        # ==============================================
+
+        elif selected == 4:
+            mission4()
+
+
+        # ==============================================
+        # MISSION 5
+        # ==============================================
+
+        elif selected == 5:
+            mission5()
+
+
+        # ==============================================
+        # MISSION 6
+        # ==============================================
+
+        elif selected == 6:
+            mission6()
+
+
+        # ==============================================
+        # MISSION 7
+        # ==============================================
+
+        elif selected == 7:
+            mission7()
+
+
+        # ==============================================
+        # MISSION VÉGE
+        # ==============================================
+
+        #hub.speaker.beep()
+
+        # Visszaírjuk a kiválasztott mission számát
+
+        hub.display.number(selected)
+
+        wait(500)
+
+
+    wait(50)
