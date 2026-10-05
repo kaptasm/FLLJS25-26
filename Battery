@@ -1,0 +1,31 @@
+from pybricks.hubs import PrimeHub
+from pybricks.tools import wait
+
+hub = PrimeHub()
+
+MIN_V, MAX_V = 6800, 8300
+
+print('Akkumulátor Töltöttségi szintje: ')
+
+while True:
+    v_mv = hub.battery.voltage()
+    pct = max(0, min(100, int((v_mv - MIN_V) / (MAX_V - MIN_V) * 100)))
+    
+    try:
+        is_charging = hub.charger.connected()
+        status = hub.charger.status()
+    except AttributeError:
+        is_charging = False
+        status = 0
+
+    remaining_pct = 100 - pct
+    est_minutes = int(remaining_pct * 1.2)
+
+    if is_charging and status == 1:
+        print(f"Töltöttség: {pct}% | [TÖLTÉS ALATT] -> Hátralévő idő: kb. {est_minutes} perc ⚡")
+    elif is_charging and status == 2:
+        print(f"Töltöttség: {pct}% | Akkumulátor teljesen feltöltve! ✅")
+    else:
+        print(f"Töltöttség: {pct}% | [AKKUS ÜZEMMÓD] (Töltőn kb. {est_minutes} perc lenne a 100%)")
+
+    wait(600000)
