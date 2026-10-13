@@ -139,63 +139,47 @@ while True:
     if color is not None and color != last_color:
 
 
-        # ==============================================
-        # SÁRGA → 1
-        # ==============================================
+        # VILÁGOSZÖLD → 1   → Jani
 
-        if color == "SARGA":
+        if color == "VILAGOSZOLD":
 
             selected = 1
 
+        # SÁRGA → 2     → Jani
 
-        # ==============================================
-        # PIROS → 2
-        # ==============================================
-
-        elif color == "PIROS":
+        elif color == "SARGA":
 
             selected = 2
 
 
-        # ==============================================
-        # VILÁGOSKÉK → 3
-        # ==============================================
+        # SÖTÉTZÖLD → 3      → Jani
 
-        elif color == "VILAGOSKEK":
+        elif color == "SOTETZOLD":
 
             selected = 3
 
+        # VILÁGOSKÉK → 4      → Zoli
 
-        # ==============================================
-        # SÖTÉTKÉK → 4
-        # ==============================================
-
-        elif color == "SOTETKEK":
+        elif color == "VILAGOSKEK":
 
             selected = 4
 
 
-        # ==============================================
-        # VILÁGOSZÖLD → 5
-        # ==============================================
+        # SÖTÉTKÉK → 5      → Ödi
 
-        elif color == "VILAGOSZOLD":
+        elif color == "SOTETKEK":
 
             selected = 5
 
 
-        # ==============================================
-        # SÖTÉTZÖLD → 6
-        # ==============================================
+        # PIROS → 6      → Ödi
 
-        elif color == "SOTETZOLD":
+        elif color == "PIROS":
 
             selected = 6
 
 
-        # ==============================================
-        # FEHÉR → 7
-        # ==============================================
+        # FEHÉR → 7      → Fecó
 
         elif color == "FEHER":
 
