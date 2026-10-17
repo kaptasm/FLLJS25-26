@@ -10,19 +10,11 @@ from js_mission_3 import mission3
 from js_mission_4 import mission4
 from js_mission_5 import mission5
 from js_mission_6 import mission6
+from js_mission_7 import mission7
 
 
 hub = PrimeHub()
 color_sensor = ColorSensor(Port.C)
-
-class AbortMission(Exception):
-    """Saját kivétel a küldetés azonnali leállításához."""
-    pass
-
-# Globális változó a küldetés állapotának nyomon követésére
-mission_running = False
-
-
 
 # ==================================================
 # MENÜ
