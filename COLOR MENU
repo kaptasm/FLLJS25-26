@@ -3,16 +3,25 @@ from pybricks.pupdevices import ColorSensor
 from pybricks.parameters import Port, Button
 from pybricks.tools import wait
 
-from missionproba1 import mission1
-from missionproba2 import mission2
-from missionproba3 import mission3
-from missionproba4 import mission4
-from missionproba5 import mission5
-from missionproba6 import mission6
-from missionproba7 import mission7
+
+from js_mission_1 import mission1
+from js_mission_2 import mission2
+from js_mission_3 import mission3
+from js_mission_4 import mission4
+from js_mission_5 import mission5
+from js_mission_6 import mission6
+
 
 hub = PrimeHub()
 color_sensor = ColorSensor(Port.C)
+
+class AbortMission(Exception):
+    """Saját kivétel a küldetés azonnali leállításához."""
+    pass
+
+# Globális változó a küldetés állapotának nyomon követésére
+mission_running = False
+
 
 
 # ==================================================
@@ -226,11 +235,23 @@ while True:
 
         last_color = None
 
+    
+    # ==================================================
+    # BAL GOMB → LEÁLLÍTÁS / ALAPHELYZET (A MENÜ FUT MARAD)
+    # ==================================================
+    if Button.LEFT in hub.buttons.pressed():
+        while Button.LEFT in hub.buttons.pressed():
+            wait(50)
+        
+        # Leállítjuk a robotot (ha a 'bot' objektum definiálva van ebben a fájlban)
+        bot.stop()
+        
+        # A continue visszaugrik a while True ciklus elejére, így a menü nem áll le!
+        continue
 
     # ==================================================
     # JOBB GOMB → INDÍTÁS
     # ==================================================
-
     if Button.RIGHT in hub.buttons.pressed():
 
         # Megvárjuk, hogy elengedje a gombot
