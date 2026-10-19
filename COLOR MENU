@@ -4,13 +4,13 @@ from pybricks.parameters import Port, Button
 from pybricks.tools import wait
 
 
-from js_mission_1 import mission1
-from js_mission_2 import mission2
-from js_mission_3 import mission3
-from js_mission_4 import mission4
-from js_mission_5 import mission5
-from js_mission_6 import mission6
-from js_mission_7 import mission7
+from js_mission1 import mission1
+from js_mission2 import mission2
+from js_mission3 import mission3
+from js_mission4 import mission4
+from js_mission5 import mission5
+from js_mission6 import mission6
+from js_mission7 import mission7
 
 
 hub = PrimeHub()
@@ -207,7 +207,7 @@ while True:
 
             # Jelzés, hogy kiválasztotta
 
-            #hub.speaker.beep()
+            hub.speaker.beep()
 
             print(color)
 
@@ -228,19 +228,6 @@ while True:
         last_color = None
 
     
-    # ==================================================
-    # BAL GOMB → LEÁLLÍTÁS / ALAPHELYZET (A MENÜ FUT MARAD)
-    # ==================================================
-    if Button.LEFT in hub.buttons.pressed():
-        while Button.LEFT in hub.buttons.pressed():
-            wait(50)
-        
-        # Leállítjuk a robotot (ha a 'bot' objektum definiálva van ebben a fájlban)
-        bot.stop()
-        
-        # A continue visszaugrik a while True ciklus elejére, így a menü nem áll le!
-        continue
-
     # ==================================================
     # JOBB GOMB → INDÍTÁS
     # ==================================================
