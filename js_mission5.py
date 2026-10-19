@@ -3,10 +3,6 @@ from js_alap import nav_motor_1,nav_motor_2, kieg_motor_1, kieg_motor_2, bot, wa
 def mission5(): 
     bot.use_gyro(True)
 
-
-
-#fokot megcsinálni a mag begyűjtéshez + egy két cente előre menet a lassú betolásnál
-
 #drón
 kieg_motor_1.run_angle(800,300)
 bot.turn(10.3)
@@ -58,27 +54,3 @@ bot.use_gyro(False)
 
 if __name__ == "__main__":
     mission5()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#SIKSZ SZEVÖN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
