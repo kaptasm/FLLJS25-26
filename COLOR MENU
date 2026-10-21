@@ -207,7 +207,7 @@ while True:
 
             # Jelzés, hogy kiválasztotta
 
-            hub.speaker.beep()
+            hub.speaker.beep(400,20)
 
             print(color)
 
@@ -241,7 +241,7 @@ while True:
 
         # Indítási hang
 
-        hub.speaker.beep()
+        hub.speaker.beep(300,50)
 
 
         # ==============================================
