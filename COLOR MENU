@@ -110,10 +110,10 @@ def felismer_szint():
         # REF 3 körül = sötétkék
         # REF 7 körül = világoskék
 
-        if REF <= 4:
+        if H >= 215 and H <= 219:
             return "SOTETKEK"
 
-        else:
+        elif H >= 198 and H <= 200:
             return "VILAGOSKEK"
 
 
@@ -143,12 +143,14 @@ while True:
         # VILÁGOSZÖLD → 1   → Jani
 
         if color == "VILAGOSZOLD":
+            hub.speaker.beep(100,30)
 
             selected = 1
 
         # SÁRGA → 2     → Jani
 
         elif color == "SARGA":
+            hub.speaker.beep(200,30)
 
             selected = 2
 
@@ -156,12 +158,14 @@ while True:
         # SÖTÉTZÖLD → 3      → Jani
 
         elif color == "SOTETZOLD":
+            hub.speaker.beep(300,30)
 
             selected = 3
 
         # VILÁGOSKÉK → 4      → Zoli
 
         elif color == "VILAGOSKEK":
+            hub.speaker.beep(400,30)
 
             selected = 4
 
@@ -169,6 +173,7 @@ while True:
         # SÖTÉTKÉK → 5      → Ödi
 
         elif color == "SOTETKEK":
+            hub.speaker.beep(500,30)
 
             selected = 5
 
@@ -176,6 +181,7 @@ while True:
         # PIROS → 6      → Ödi
 
         elif color == "PIROS":
+            hub.speaker.beep(600,30)
 
             selected = 6
 
@@ -183,6 +189,7 @@ while True:
         # FEHÉR → 7      → Fecó
 
         elif color == "FEHER":
+            hub.speaker.beep(800,30)
 
             selected = 7
 
@@ -207,7 +214,6 @@ while True:
 
             # Jelzés, hogy kiválasztotta
 
-            hub.speaker.beep(400,20)
 
             print(color)
 
